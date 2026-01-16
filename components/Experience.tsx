@@ -19,11 +19,10 @@ const experiences: ExperienceItem[] = [
     location: "Surat",
     period: "May 2024 - Present",
     responsibilities: [
-      "Developed full-stack web applications and REST APIs using Django, DRF, React, and PostgreSQL, with a focus on performance and scalability",
-      "Built automated data extraction pipelines using Scrapy and Playwright for large-scale, reliable web scraping",
+      "Currently building a Citation heavy - Agentic Chatbot with RAG capabilities for HipHopCulture, integrating microservices for document processing, vector search, and user interaction, with capabilities to handle PDFs, Article Pages, and Youtube Videos as knowledge base sources",
       "Integrated AI features using OpenAI APIs and Pinecone for semantic search and intelligent automation",
-      "Built the end-to-end backend for a Traditional Chinese Medicine-based RAG chatbot using a microservices architecture, supporting a knowledge base of 600+ videos and 100+ textbooks, with services for video transcription, PDF/text vectorization, query processing, similarity search, and core application logic",
-      "Currently working on a cricket video analysis system that extracts player keypoints using RTMPose and detects the cricket bat with a retrained YOLOv8 model",
+      "Built an end-to-end RAG Chatbot for a Traditional Chinese Medicine-based RAG chatbot using a microservices architecture, supporting a knowledge base of 600+ videos and 100+ textbooks, with services for video transcription, PDF/text vectorization, query processing, similarity search, and core application logic",
+      "Built a cricket video analysis system that extracts player keypoints using RTMPose and detects the cricket bat with a retrained YOLOv8 model",
     ],
   },
   {
@@ -124,9 +123,9 @@ export default function Experience() {
                         initial={{ opacity: 0, x: -20 }}
                         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                         transition={{ duration: 0.4, delay: 0.6 + index * 0.2 + idx * 0.1 }}
-                        className="flex items-start text-gray-400 leading-relaxed"
+                        className="flex items-start align-center justify-start text-gray-400 leading-relaxed"
                       >
-                        <span className="text-cyan-500 mr-3 mt-1.5">▹</span>
+                        <span className="text-cyan-500 mr-3">⩥</span>
                         <span>{responsibility}</span>
                       </motion.li>
                     ))}

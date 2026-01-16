@@ -15,11 +15,12 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Measurement Management System",
+    title: "FNMAUnderwriter",
     description:
-      "Delivered a Measurement Management System for a civil engineering firm in Surat. Streamlined site data collection and reporting processes, and included an offline data sync process for seamless field operations.",
-    tech: ["Django", "Django REST Framework", "PostgreSQL", "React", "Offline Sync"],
-    link: "https://shreemahakalienterprise.netlify.app/",
+      "AI-powered CSV data analytics platform that enables seamless data analysis through intelligent chat. Upload CSV files and interact with an advanced AI assistant to extract insights, identify trends, and make data-driven decisions. Features include AI-powered chat for natural language queries, automatic data cleaning and transformation, AI-generated Excel-style formulas, stunning interactive visualizations and dashboards, and enterprise-grade encryption for secure data handling.",
+    tech: ["AI Analytics", "CSV Processing", "NLP", "Data Visualization"],
+    link: "https://fnmaunderwriter.ai/",
+    image: "https://your-image-url-here.com/fnmaunderwriter-preview.png",
   },
   {
     title: "HUD Finance-focused RAG Chatbot",
@@ -27,13 +28,23 @@ const projects: Project[] = [
       "Built the backend for a HUD (Housing and Urban Development) finance-focused RAG chatbot. Included document upload, processing, and question-answering capabilities using vector search for intelligent document retrieval.",
     tech: ["FastAPI", "Python", "Vector Databases", "Pinecone", "OpenAI", "RAG"],
     link: "#",
+    image: "https://your-image-url-here.com/hud-chatbot-preview.png",
   },
   {
     title: "Google/Yelp Review & Marketing Widgets Backend",
     description:
-      "Recently built a FastAPI-based backend for generating customizable Google/Yelp reviews and marketing widgets. Scraped Yelp, used Google Reviews API, and utilized templates to produce a simple two-line HTML embed (div + script) for easy website integration.",
+    "Recently built a FastAPI-based backend for generating customizable Google/Yelp reviews and marketing widgets. Scraped Yelp, used Google Reviews API, and utilized templates to produce a simple two-line HTML embed (div + script) for easy website integration.",
     tech: ["FastAPI", "Python", "Web Scraping", "Google Reviews API", "Yelp API"],
     link: "#",
+    image: "https://your-image-url-here.com/review-widgets-preview.png",
+  },
+  {
+    title: "Measurement Management System",
+    description:
+      "Delivered a Measurement Management System for a civil engineering firm in Surat. Streamlined site data collection and reporting processes, and included an offline data sync process for seamless field operations.",
+    tech: ["Django", "Django REST Framework", "PostgreSQL", "React", "Offline Sync"],
+    link: "https://shreemahakalienterprise.netlify.app/",
+    image: "https://your-image-url-here.com/mms-preview.png",
   },
 ];
 
