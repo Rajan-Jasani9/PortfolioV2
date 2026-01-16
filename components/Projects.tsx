@@ -58,7 +58,7 @@ export default function Projects() {
   return (
     <section
       ref={ref}
-      className="py-20 px-6 lg:px-16 bg-black"
+      className="py-12 px-6 lg:px-16 bg-black"
       id="projects"
     >
       <div className="max-w-7xl mx-auto">
