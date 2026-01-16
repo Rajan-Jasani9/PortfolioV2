@@ -2,14 +2,16 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
+import { JSX, useRef } from "react";
+import Image from "next/image";
+
 
 interface Project {
   title: string;
   description: string;
   tech: string[];
   link?: string;
-  image?: string;
+  image?: JSX.Element | string;
   video?: string;
 }
 
@@ -20,7 +22,8 @@ const projects: Project[] = [
       "AI-powered CSV data analytics platform that enables seamless data analysis through intelligent chat. Upload CSV files and interact with an advanced AI assistant to extract insights, identify trends, and make data-driven decisions. Features include AI-powered chat for natural language queries, automatic data cleaning and transformation, AI-generated Excel-style formulas, stunning interactive visualizations and dashboards, and enterprise-grade encryption for secure data handling.",
     tech: ["AI Analytics", "CSV Processing", "NLP", "Data Visualization"],
     link: "https://fnmaunderwriter.ai/",
-    image: "https://your-image-url-here.com/fnmaunderwriter-preview.png",
+    image: <Image src="/fnmaunderwriter-preview.png" alt="FNMA Underwriter" width={800} height={500} />
+,
   },
   {
     title: "HUD Finance-focused RAG Chatbot",
@@ -28,7 +31,7 @@ const projects: Project[] = [
       "Built the backend for a HUD (Housing and Urban Development) finance-focused RAG chatbot. Included document upload, processing, and question-answering capabilities using vector search for intelligent document retrieval.",
     tech: ["FastAPI", "Python", "Vector Databases", "Pinecone", "OpenAI", "RAG"],
     link: "#",
-    image: "https://your-image-url-here.com/hud-chatbot-preview.png",
+    image: <Image src="/hud-chatbot-preview.png" alt="HUD Chatbot Project" width={800} height={500} />
   },
   {
     title: "Google/Yelp Review & Marketing Widgets Backend",
@@ -44,7 +47,7 @@ const projects: Project[] = [
       "Delivered a Measurement Management System for a civil engineering firm in Surat. Streamlined site data collection and reporting processes, and included an offline data sync process for seamless field operations.",
     tech: ["Django", "Django REST Framework", "PostgreSQL", "React", "Offline Sync"],
     link: "https://shreemahakalienterprise.netlify.app/",
-    image: "https://your-image-url-here.com/mms-preview.png",
+    image: <Image src="/mms-preview.png" alt="MMS Project" width={800} height={500} />
   },
 ];
 
@@ -89,25 +92,7 @@ export default function Projects() {
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 to-blue-500/0 group-hover:from-cyan-500/10 group-hover:to-blue-500/10 transition-all duration-300"></div>
               
               {/* Preview Area */}
-              {(project.image || project.video) && (
-                <div className="relative w-full h-48 sm:h-64 bg-gray-800 overflow-hidden">
-                  {project.video ? (
-                    <video
-                      className="w-full h-full object-cover"
-                      src={project.video}
-                      controls
-                      muted
-                    />
-                  ) : (
-                    <img
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      src={project.image}
-                      alt={project.title}
-                    />
-                  )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
-                </div>
-              )}
+              {(project.image || project.video) && project.image}
 
               <div className="relative p-6 sm:p-8">
                 <div className="flex items-start justify-between mb-4">
